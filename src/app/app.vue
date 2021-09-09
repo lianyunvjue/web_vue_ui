@@ -1,8 +1,7 @@
 <template>
   <h3>
-    <router-link to="/">{{ name }}</router-link>
+    {{ name }}
   </h3>
-  <router-view></router-view>
 </template>
 
 <script>
@@ -11,10 +10,6 @@ export default {
     return {
       name: '宁皓网',
     };
-  },
-
-  created() {
-    console.log(this.$store.state);
   },
 };
 </script>
