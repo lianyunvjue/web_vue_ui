@@ -1,7 +1,5 @@
 <template>
-  <h3>
-    <router-link to="/">{{ name }}</router-link>
-  </h3>
+  <h3>{{ name }}</h3>
 </template>
 
 <script>
