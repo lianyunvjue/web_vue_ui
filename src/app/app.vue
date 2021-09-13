@@ -1,12 +1,34 @@
 <template>
-  <h3>{{ name }}</h3>
+  <h3 @click="changeName">{{ nameEmoji }}</h3>
 </template>
 
 <script>
+import { ref, onMounted, watch, computed } from 'vue';
+
 export default {
-  data() {
+  setup() {
+    const name = ref('宁皓网');
+
+    const changeName = () => {
+      name.value = 'NINGHAO';
+    };
+
+    //生命周期
+    onMounted(() => {
+      console.log('mounted');
+    });
+
+    //监视数据
+    watch(name, (newName, oldName) => {
+      console.log(newName, oldName);
+    });
+
+    // 计算属性
+    const nameEmoji = computed(() => `${name.value}🤪`);
     return {
-      name: '宁皓网',
+      name,
+      changeName,
+      nameEmoji,
     };
   },
 };
