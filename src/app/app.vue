@@ -22,5 +22,6 @@ export default {
 </script>
 
 <style>
+@import './styles/normalize.css';
 @import './styles/app.css';
 </style>
