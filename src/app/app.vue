@@ -1,22 +1,21 @@
 <template>
-  <div>
-    <h3>
-      <router-link to="/">{{ name }}</router-link>
-    </h3>
+  <component :is="layout">
     <router-view></router-view>
-  </div>
+  </component>
 </template>
 
 <script>
+import AppLayout from '@/app/layout/app-layout';
+
 export default {
   data() {
     return {
-      name: '宁皓网',
+      layout: 'AppLayout',
     };
   },
 
-  created() {
-    console.log(this.$store.state);
+  components: {
+    AppLayout,
   },
 };
 </script>
@@ -24,4 +23,5 @@ export default {
 <style>
 @import './styles/normalize.css';
 @import './styles/app.css';
+@import './styles/page.css';
 </style>
