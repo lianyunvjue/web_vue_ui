@@ -67,4 +67,6 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+@import './styles/app-icon.css';
+</style>

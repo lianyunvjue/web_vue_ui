@@ -6,7 +6,7 @@
 
 <script>
 import { defineComponent } from 'vue';
-import AppIcon from '@app/components/app-icon';
+import AppIcon from '@/app/components/app-icon';
 
 export default defineComponent({
   name: 'AppSidebarItemPopular',

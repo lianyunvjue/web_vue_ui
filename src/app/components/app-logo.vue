@@ -14,7 +14,7 @@ export default defineComponent({
   props: {
     name: {
       type: String,
-      default: '32',
+      default: 'w32',
     },
 
     size: {
